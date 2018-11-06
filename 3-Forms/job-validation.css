@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,600');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+}
+
+h1 {
+    margin-bottom: 2rem;
+}
+
+form {
+    width: 60% ;
+    height: auto;
+    margin: 4% auto;
+}
+
+input, textarea {
+    width: 50%;
+    height: 2rem;
+    padding: .3rem;
+    outline: none;
+}
+
+input[type="radio"] {
+    width:inherit;
+}
+
+input:required:invalid {
+    border: 2px solid red;
+}
+
+.ayuda {
+    display: none;
+    font-size: .9rem;
+}
+
+input:focus + .ayuda {
+    display: inline-block;
+}
+
+.cand-error {
+    display: none;
+}
+
+.val-error {
+    display: flex;
+}
+
+legend {
+    font-weight: 600;
+    padding: .3rem;
+}
+
+fieldset {
+    border-radius: 3px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.form__control--group {
+    margin-bottom: 1rem;
+}
+
+label {
+    font-size: .7rem;
+    font-weight: 600;
+    display:block;
+    margin-bottom: .3rem;
+}
+
+.form__label--tto {
+    display: inline-block;
+    padding:0 1rem 0 .5rem;
+}
+output {
+    line-height: 100%;
+}
+
+.cand-error {
+    border:1px solid;
+    padding: .5rem;
+    font-size: .8rem;
+    margin-top: .5rem;
+    line-height: 24px;
+}
+
+.cand-error:before {
+    content:"";
+    background-image: url(img/warning.png);
+    width: 32px;
+    height: 24px;
+    display: inline-block;
+    background-size: 24px 24px;
+    background-repeat: no-repeat;
+}
+

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tratamiento de Video con Canvas</title>
+    <link rel="stylesheet" href="css/video-canvas.css">
+
+</head>
+<body>
+
+<!-- https://videos.pexels.com/videos/aerial-shot-of-temple-1244996 -->
+<!-- Uso libre sin atribución -->
+<!-- By Suraphat Nuea-on: https://www.pexels.com/@Suraphat -->
+
+
+<canvas id="mainCanvas"></canvas>
+
+
+<!-- Mantengo el aspect ratio del video 16:9 -->
+<video id="videoObj" width="640" height="360" controls>
+    <source src="video/aerial_shot_of_temple.mp4" type="video/mp4">
+</video>
+
+<div class="controls">
+    <button id="capture">Captura fotograma</button>
+    <button id="lightness">Filtro Lightness</button>
+    <button id="luminosity">Filtro Luminosity</button>
+    <button id="average">Filtro Average</button>
+
+    <button id="blur" class="blur">Filtro desenfoque</button>
+</div>
+
+<!-- Trato el vídeo y el canvas a la vez -->
+
+<script src="js/video-canvas.js"></script>
+<script src="js/app-canvas.js"></script>
+
+</body>
+</html>

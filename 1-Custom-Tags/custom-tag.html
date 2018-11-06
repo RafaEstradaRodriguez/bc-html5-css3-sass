@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>document.createElement("myEpicTag")</script>
+    <style>
+        myEpicTag {
+            display: block;
+            background-color: #fabada;
+            font-size: 3.5em;
+        }
+
+        myOtherEpicTag {
+            display: block;
+            background-color: #a1a1a1;
+            font-size: 2.5em;
+        }
+    </style>
+</head>
+<body>
+<h1>Encabezado de ejemplo</h1>
+<myEpicTag>My Hero Element</myEpicTag>
+
+
+<script>
+    let otroEpicTag = document.createElement("myOtherEpicTag");
+    otroEpicTag.innerText = "Este es otro epic tag distinto";
+
+    document.querySelector('body').appendChild(otroEpicTag);
+</script>
+</body>
+</html>

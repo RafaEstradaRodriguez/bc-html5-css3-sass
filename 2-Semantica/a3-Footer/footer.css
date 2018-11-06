@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400');
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    color: #333;
+}
+
+footer {
+    font-size: .7rem;
+    background: #f2f2f2;
+    color: #333;
+    width: 100%;
+    height: auto;
+    padding-top: 1.4rem;
+}
+
+nav.footer__navigation,
+section.legal {
+    width: 80%;
+    margin: 1.4rem auto;
+}
+
+.nav-column {
+    float: left;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+
+footer h2 {
+    position: absolute;
+    width: 1px;
+    height:1px;
+    overflow: hidden;
+}
+
+footer .notas-nuevos-subscriptores {
+    width: 80%;
+    margin: 0 auto;
+    line-height: 1.4rem;
+    color: #AAA;
+}
+
+footer .notas-nuevos-subscriptores hr {
+    border-top: 1px solid #BBB;
+    background-color: #BBB;
+}
+
+.legal {
+    clear: both;
+    line-height: 2.4rem;
+    text-align: center;
+    color: #999;
+}
+
+.legal a {
+    color: #0070c9;
+    text-decoration: none;
+}
+
+.legal a:hover {
+    text-decoration: underline;
+}
+
+.nav-column {
+    width: 18%;
+}
+
+.nav-column h3 {
+    font-size: .8rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.nav-column ul {
+    list-style: none;
+    overflow: hidden;
+}
+
+.nav-column li {
+    line-height: 1.4rem;
+}
+
+.nav-column a {
+    text-decoration: none;
+    color: #888;
+}
+
+.nav-column a:hover {
+    color: #666;
+    text-decoration: underline;
+}
+
+.nav-column .split-section {
+    margin-top: .8rem;
+}
