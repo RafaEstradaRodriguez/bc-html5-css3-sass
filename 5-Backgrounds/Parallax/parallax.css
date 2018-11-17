@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+    line-height: 180%;
+    color: #666;
+    text-align: center;
+}
+
+.parallax1 {
+    background: url(img/first.jpeg);
+    min-height: 100%;
+}
+
+.parallax2 {
+    background: url(img/second.jpeg);
+    min-height: 60%;
+}
+
+.parallax3 {
+    background: url(img/third.jpeg);
+    min-height: 40%;
+}
+
+.parallax4 {
+    background: url(img/fourth.jpeg);
+    min-height: 100%;
+}
+
+.parallax1, .parallax2, .parallax3, .parallax4 {
+    position: relative;
+    opacity: .75;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.titulo {
+    position: absolute;
+    color: #fff;
+    font-size: 6rem;
+    width: 100%;
+    top: 38%;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    text-shadow: 0 0 10px #000;
+}
+
+.titulo-sm {
+    position: absolute;
+    width: 100%;
+    font-size: 250%;
+    top: 45%;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    text-shadow: 0 0 10px #000;
+}
+
+.two-col {
+    float: left;
+    width: 42%;
+    padding: 0 4%;
+    text-align: left;
+}
+
+section {
+    overflow: auto;
+    padding: 50px 80px;
+}
+
+.colored {
+    padding: 50px 80px;
+    overflow: auto;
+    background-color: #5a97e9;
+    color: #f2f2f2;
+}
+
+@media (max-width: 768px) {
+    .titulo {
+        font-size: 250%;
+    }
+
+    .titulo-sm {
+        font-size: 180%;
+    }
+
+    .two-col {
+        width: 100%;
+        padding: 0;
+    }
+}

@@ -1,0 +1,58 @@
+<!--https://codepen.io/RickMo/pen/VGmogV-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplo de g, symbol y defs</title>
+    <style>
+        svg {
+            background-color: #880E4F;
+        }
+    </style>
+</head>
+<body>
+    <svg width="130" height="70" viewBox="0 0 130 70">
+        <symbol id="simbolo1" fill="#FFCDD2">
+            <title>Ejemplo de uso de symbol</title>
+            <desc>Con symbol puedes usar elementos sin que se muestren hasta su primera instancia. Por lo que en nuestro caso sólo es mostrarán 2</desc>
+            <rect class="rectangulo" x="10" y="10" width="50" height="50" />
+        </symbol>
+        <!-- ambas tienen espacio por el x,y del símbolo (10)
+         Como vemos solo se usan 2, no 3
+        -->
+        <use xlink:href="#simbolo1" x="0" y ="0"/>
+        <use xlink:href="#simbolo1" x="60" y="0"/>
+
+    </svg>
+
+    <svg width="190" height="70" viewBox="0 0 190 70">
+        <g id="simbolo2" fill="#FFCDD2">
+            <title>Ejemplo de uso de g</title>
+            <desc>Con geoup puedes usar elementos y sí se muestran.  Por lo que en nuestro caso se mostrarán 3</desc>
+            <rect class="rectangulo" x="10" y="10" width="50" height="50" />
+        </g>
+        <!-- ambas tienen espacio por el x,y del símbolo (10)
+         Como vemos solo se usan 2, no 3
+        -->
+        <use xlink:href="#simbolo2" x="60" y ="0"/>
+        <use xlink:href="#simbolo2" x="120" y="0"/>
+
+    </svg>
+
+    <svg width="190" height="70" viewBox="0 0 190 70">
+        <defs>
+            <g id="simbolo3" fill="#FFCDD2">
+                <title>Ejemplo de uso de g</title>
+                <desc>Con defs + group puedes usar elementos y tampoco se muestran.  Por lo que en nuestro caso se mostrarán 2</desc>
+                <rect class="rectangulo" x="10" y="10" width="50" height="50" />
+            </g>
+        </defs>
+        <!-- ambas tienen espacio por el x,y del símbolo (10)
+         Como vemos solo se usan 2, no 3
+        -->
+        <use xlink:href="#simbolo2" x="60" y ="0"/>
+        <use xlink:href="#simbolo2" x="120" y="0"/>
+
+    </svg>
+</body>
+</html>

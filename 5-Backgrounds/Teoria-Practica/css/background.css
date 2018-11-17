@@ -1,0 +1,20 @@
+* {
+    margin:0;
+    padding: 0;
+}
+
+div.tiger {
+    width:90vw;
+    height:90vh;
+    border:2px #3B5998 solid;
+    background-position: center;
+    background-image: url(../img/tiger.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow:hidden;
+}
+
+/*
+figure.img {
+    float: left;
+}*/

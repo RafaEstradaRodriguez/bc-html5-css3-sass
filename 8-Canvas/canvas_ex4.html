@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Canvas ejemplo 3</title>
+    <style>
+        canvas {
+            width: 900px;
+            height: 750px;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="mainCanvas"></canvas>
+
+    <script>
+        var canvas = document.getElementById("mainCanvas");
+        canvas.width  = canvas.scrollWidth;
+        canvas.height = canvas.scrollHeight;
+
+        var ctx = canvas.getContext('2d');
+
+        ctx.fillStyle = "red";
+
+        ctx.beginPath();
+        ctx.moveTo(100, 100);
+        ctx.lineTo(175,50);
+        ctx.lineTo(250,100);
+        ctx.lineTo(250,200);
+        ctx.lineTo(100,200);
+        ctx.fill();
+
+    </script>
+</body>
+</html>

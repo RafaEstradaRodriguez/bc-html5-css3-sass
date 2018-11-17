@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplo de un smiley</title>
+</head>
+<body>
+
+<svg width="900" height="750">
+
+    <!-- Creación de un grupo para usarlo en mas ocasiones -->
+    <g id="face">
+
+        <!-- cabeza -->
+        <circle cx="100" cy="100" r="75" stroke="black" stroke-width="5" fill="yellow"/>
+
+        <!-- ojo izquierdo -->
+        <circle cx="75" cy="85" r="10" stroke="black" stroke-width="3" fill="black"/>
+
+        <!-- ojo derecho -->
+        <circle cx="125" cy="85" r="10" stroke="black" stroke-width="3" fill="black"/>
+
+        <!-- boca -->
+        <path d="M 70,120 Q100,175,130,120" stroke="black" stroke-width="5" fill="none"/>
+
+    </g>
+
+    <use xlink:href="#face" transform="translate(300, 300) scale(1, -1)"/>
+    <use xlink:href="#face" transform="translate(300, 400) rotate(-90)"/>
+
+</svg>
+</body>
+</html>

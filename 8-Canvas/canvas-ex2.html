@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplo básico de canvas</title>
+    <style>
+        #mainCanvas {
+            width: 900px;
+            height: 750px;
+            border:1px solid #F00;
+        }
+    </style>
+</head>
+<body>
+<!-- Creo el canvas con un identificador y sus dimensiones -->
+<canvas id="mainCanvas" width="350" height="150"></canvas>
+
+<!-- Creo una variable donde almaceno una referencia al elemento -->
+<script>
+    var canvas = document.getElementById("mainCanvas");
+
+    canvas.width = canvas.scrollWidth;
+    canvas.height = canvas.scrollHeight;
+
+    var ctx = canvas.getContext('2d');
+    ctx.fillStyle = "red";
+    ctx.beginPath();
+    ctx.moveTo(100, 100);
+    ctx.lineTo(175,50);
+    ctx.lineTo(250,100);
+    ctx.lineTo(250,200);
+    ctx.lineTo(100,200);
+    ctx.fill();
+
+</script>
+
+</body>
+</html>

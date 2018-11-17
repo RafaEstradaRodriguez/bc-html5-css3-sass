@@ -1,0 +1,173 @@
+html, body {
+    width: 100%;
+    height: 100%;
+
+}
+
+* {
+    margin:0; padding: 0;
+}
+
+/* -- Stacking order lo creamos en el padre. Osea, aquí -- */
+.carretera {
+    width: 50%;
+    height: 100%;
+    background-color: #424142;
+    position: absolute;
+    left: 50%;
+    top:0;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.protas {
+    width: 50%;
+    height: 100%;
+    background-color: #1d1d1d;
+    position: absolute;
+    left:0;
+    top: 0;
+}
+
+.items {
+    display: flex;
+    flex-flow: column-reverse;
+    justify-content: center;
+    align-items: center;
+}
+
+.items img {
+    width:20%;
+    height: 20%;
+    margin-bottom:2%;
+}
+
+.protas h1 {
+    color: #FFF;
+    text-align: center;
+    width: 100%;
+    margin-top: 5%;
+}
+
+/* -- Línea que tiene el z-index debajo de la sombra, evidentemente -- */
+.linea {
+    background: url(tile_linea_carretera.png) repeat;
+    height: 80px;
+    width: 100%;
+    position: absolute;
+    bottom: 10%;
+    left: 0%;
+    z-index:-2;
+}
+
+[class^='coche'] {
+    width: 54px;
+    height: 75px;
+    background: #f00;
+    position: absolute;
+    bottom:15%;
+}
+
+/* -- El z-index de -1 es para estar debajo del padre -- */
+[class^='coche']::after {
+    content: url("coches/sombra.png");
+    width: 54px;
+    height: 75px;
+    top: 5px;
+    left: 5px;
+
+    position: absolute;
+    z-index:-1;
+}
+
+.prota-azul {
+    animation: ranking 3s;
+}
+
+.prota-amarillo {
+    animation: ranking 3s;
+    animation-delay: 3s;
+}
+
+.prota-rojo {
+    animation: ranking 3s;
+    animation-delay: 6s;
+}
+
+.prota-gris {
+
+    animation: ranking 3s;
+    animation-delay: 9s;
+}
+
+.coche-amarillo {
+     left: 15%;
+    background: url("coches/coche-amarillo.png") no-repeat;
+    animation: coche-amarillo 12s;
+}
+
+.coche-rojo {
+    left: 35%;
+    background: url("coches/coche-rojo.png") no-repeat;
+    animation: coche-rojo 12s;
+}
+
+.coche-azul {
+    left: 55%;
+    background: url("coches/coche-azul.png") no-repeat;
+    animation: coche-azul 12s;
+}
+
+.coche-gris {
+    left: 75%;
+    background: url("coches/coche-gris.png") no-repeat;
+    animation: coche-gris 12s;
+}
+
+@keyframes ranking {
+    0% {
+        order: 1;
+        border: 5px solid #b6dc63;
+    }
+    100% {
+        order: 1;
+        border: 5px solid #b6dc63;
+    }
+}
+
+@keyframes coche-amarillo {
+    0% { bottom: 15%; }
+    80% { bottom: 50% }
+    85% { bottom: 45%; }
+    99% { bottom:90%;}
+    100% { bottom:100%; }
+}
+
+@keyframes coche-rojo {
+    0% { bottom: 15%; }
+    10% { bottom: 25% }
+    15 % { bottom: 20%; }
+    55% { bottom: 65%; }
+    90% { bottom: 60%;}
+    99% { bottom:90%;}
+    100% { bottom:100%;}
+}
+
+@keyframes coche-azul {
+    0% { bottom: 15%; }
+    10% { bottom: 35%; left: 60% }
+    45 % { bottom: 60%; }
+    55% { bottom: 55%; left: 45%;}
+    90% { bottom: 70%;left: 55%;}
+    99% { bottom:90%;}
+    100% { bottom:100%;}
+}
+
+@keyframes coche-gris {
+    0% { bottom: 15%; }
+    80% { bottom: 70%; }
+    99% { bottom:90%;}
+    100% { bottom:100%;}
+}
+
+

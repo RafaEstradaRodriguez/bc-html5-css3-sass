@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.contenedor {
+    width: 200px;
+    height: 200px;
+    background-image: url(../img/tiger.jpeg);
+    border:2px #00ff00 solid;
+    position: absolute;
+    background-repeat: no-repeat;
+}
+
+#contenedor1 {
+    top: 10px;
+    left: 10px;
+    background-position: 10% 10%;
+}
+
+#contenedor2 {
+    top: 10px;
+    left: 220px;
+    background-position: 100% 100%;
+}
+
+#contenedor3 {
+    top: 10px;
+    left: 430px;
+    background-position: 100% 0%;
+}
+
+#contenedor4{
+    top: 220px;
+    left: 10px;
+    background-position: center;
+}
+
+#contenedor5 {
+    top: 220px;
+    left: 220px;
+    background-position: 40px 40px;
+    background-size: cover;
+}
+
+#contenedor6 {
+    top: 220px;
+    left: 430px;
+    background-position: center;
+    background-size: cover;
+}
+
+#contenedor7{
+    top: 430px;
+    left: 10px;
+    background-position: center;
+    background-size: contain;
+}
+
+#contenedor8 {
+    top: 430px;
+    left: 220px;
+    background-position: bottom right;
+    background-size: cover;
+}
+
+#contenedor9 {
+    top: 430px;
+    left: 430px;
+    background-position: right 50px top 100px;
+    background-size: contain;
+}
+

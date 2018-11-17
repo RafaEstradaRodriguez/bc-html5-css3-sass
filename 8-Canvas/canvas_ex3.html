@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Canvas ejemplo 3</title>
+</head>
+<body>
+    <canvas id="mainCanvas"></canvas>
+
+    <script>
+        var canvas = document.getElementById("mainCanvas");
+        var ctx = canvas.getContext('2d');
+
+        ctx.fillStyle = "red";
+        ctx.strokeStyle = "blue";
+
+        ctx.fillRect(10, 10, 50, 50);
+        ctx.strokeRect(100, 10, 50, 50);
+        ctx.clearRect(40, 20, 70,30);
+
+    </script>
+</body>
+</html>

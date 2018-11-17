@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplo básico de canvas</title>
+    <style>
+        input {
+            clear:both;
+            border: 1px solid #F00;
+            width: 200px;
+            height: 32px;
+        }
+
+        canvas {
+            position: absolute;
+            top: 50px;
+            left: 8px;
+            border:1px solid #f00;
+        }
+    </style>
+</head>
+<body>
+<!-- Creo el canvas con un identificador y sus dimensiones -->
+<input type="text" id="info">
+<canvas id="mainCanvas" width="900" height="750"></canvas>
+
+
+<!-- Creo una variable donde almaceno una referencia al elemento -->
+<script>
+    var canvas = document.getElementById("mainCanvas");
+    var info = document.getElementById('info');
+    info.value = canvas.width;
+</script>
+
+</body>
+</html>

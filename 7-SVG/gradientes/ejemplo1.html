@@ -1,0 +1,74 @@
+<!-- https://codepen.io/RickMo/pen/rZjLbV -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplo de gradientes</title>
+    <style>
+        svg {
+            background: #880E4F;
+        }
+
+        .from-color {
+            stop-color: #FFEBEE;
+        }
+
+        .to-color {
+            stop-color: #E53935;
+        }
+
+        #rectangulo {
+            fill: url(#Gradiente1);
+        }
+
+        #rectangulo2 {
+            fill: url(#Gradiente1b);
+        }
+
+        #circulo {
+            fill: url(#Gradiente2);
+        }
+        #circulo2 {
+            fill: url(#Gradiente3);
+        }
+    </style>
+</head>
+<body>
+    <svg width="130" height="70" viewBox="0 0 130 70">
+        <defs>
+            <linearGradient id="Gradiente1">
+                <stop class="from-color" offset="0%"/>
+                <stop class="to-color" offset="100%"/>
+            </linearGradient>
+            <linearGradient id="Gradiente1b" x1="0" x2="1" y1="1" y2="0">
+                <stop class="from-color" offset="0%"/>
+                <stop class="to-color" offset="100%"/>
+            </linearGradient>
+        </defs>
+
+        <rect id="rectangulo" x="10" y="10" width="50"
+              height="50"/>
+        <rect id="rectangulo2" x="70" y="10" width="50"
+              height="50"/>
+    </svg>
+
+    <svg width="130" height="70" viewBox="0 0 130 70">
+        <defs>
+            <radialGradient id="Gradiente2">
+                <!-- podríamos poner el stop-color como atributo -->
+                <stop class="from-color" offset="0%"/>
+                <stop class="to-color" offset="60%"/>
+            </radialGradient>
+
+            <radialGradient id="Gradiente3" fx="0.75" fy="0.25" >
+                <!-- podríamos hacer un style aquí con CDATA-->
+                <stop class="from-color" offset="0%"/>
+                <stop class="to-color" offset="80%"/>
+            </radialGradient>
+        </defs>
+
+        <circle id="circulo" r="25" cx="35" cy="35" />
+        <circle id="circulo2" r="25" cx="95" cy="35" />
+    </svg>
+</body>
+</html>

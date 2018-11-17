@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplo de herencia y posibles valores</title>
+    <style>
+        .contenedor {
+            font-size:16px;
+        }
+
+        .contenedor p {
+            font-size: 24px;
+        }
+
+        .contenedor p.primer-p {
+            font-size: initial;
+        }
+
+        .contenedor p.segundo-p {
+            font-size: inherit;
+        }
+
+        .contenedor p.tercer-p {
+            font-size: unset;
+        }
+    </style>
+</head>
+<body>
+
+<div class="contenedor">
+    <p class="primer-p">Éste es el primer párrafo. Voy a tomar el valor por defecto del browser y, por tanto, no voy a heredar <strong>(valor initial)</strong>
+    <p>
+    <p class="segundo-p">Éste es el segundo párrafo. Heredo del padre si la propiedad es heredable y está definida <strong>(valor inherit)</strong><p>
+    <p class="tercer-p">Éste es el tercer párrafo. En este caso primero miro a mi padre y si cuadra la pongo. Si no, actuo como initial <strong>(valor unset)</strong></p>
+    <p>Éste es el cuarto párrafo. Se aplica mi regla asociada en el CSS al font-size. No tengo valor de herencia explícito </p>
+</div>
+
+</body>
+</html>
