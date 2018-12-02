@@ -1,0 +1,39 @@
+@mixin color-del-dia($color: "manana") {
+  @if $color == "manana" {
+    color: #4e7bff;
+  } @else if $color == "mediodia" {
+    color: #fcc500;
+  } @else if $color == "tarde" {
+    color: #E53935;
+  } @else if $color == "noche" {
+    color: #032f3e;
+  }
+}
+
+.estilo {
+  @include color-del-dia("tarde");
+}
+
+
+@mixin color-del-dia2($color: "manana") {
+  $colores: (
+    "manana": #4e7bff,
+    "mediodia": #fcc500,
+    "tarde": #E53935,
+    "noche": #032f3e
+  );
+
+  @if (map_has_key($colores, $color)) {
+    color: #{map-get($colores, $color)};
+  } @else {
+    color: #{map-get($colores, "mediodia")};
+  }
+}
+
+.estilo2 {
+  @include color-del-dia2("noche");
+}
+
+.estilo3 {
+  @include color-del-dia2("no_existo");
+}

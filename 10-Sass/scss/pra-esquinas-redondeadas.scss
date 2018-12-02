@@ -1,0 +1,27 @@
+/**
+ * Queremos realizar la definición de un mixin que nos ponga las reglas de estilo
+ * para poner esquinas redondeadas a un div
+ *
+ */
+
+@mixin esquinas-redondeadas($radio-esquinas: 0 0 0 0) {
+  -webkit-border-top-left-radius: nth($radio-esquinas, 1);
+  -webkit-border-top-right-radius: nth($radio-esquinas, 2);
+  -webkit-border-bottom-right-radius: nth($radio-esquinas, 3);
+  -webkit-border-bottom-left-radius: nth($radio-esquinas, 4);
+
+  -moz-border-top-left-radius: nth($radio-esquinas, 1);
+  -moz-border-top-right-radius: nth($radio-esquinas, 2);
+  -moz-border-bottom-right-radius: nth($radio-esquinas, 3);
+  -moz-border-bottom-left-radius: nth($radio-esquinas, 4);
+
+  border-top-left-radius: nth($radio-esquinas, 1);
+  border-top-right-radius: nth($radio-esquinas, 2);
+  border-bottom-right-radius: nth($radio-esquinas, 3);
+  border-bottom-left-radius: nth($radio-esquinas, 4);
+}
+
+
+div.redondeado {
+  @include esquinas-redondeadas(2px 2px 2px 2px);
+}

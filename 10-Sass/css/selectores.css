@@ -1,0 +1,24 @@
+/* line 7, ../scss/selectores.scss */
+.clase1, #clase2 {
+  color: #F00;
+}
+
+/* line 16, ../scss/selectores.scss */
+.clase2-1 {
+  color: #0f0;
+}
+
+/* line 22, ../scss/selectores.scss */
+.claseA-1 .claseB-2 {
+  color: #FF0;
+}
+
+/* line 26, ../scss/selectores.scss */
+.claseA-3.claseA-4 {
+  color: #0FF;
+}
+
+/* line 31, ../scss/selectores.scss */
+.claseA-5, .claseA-6, .claseA-7 {
+  color: #FFF;
+}

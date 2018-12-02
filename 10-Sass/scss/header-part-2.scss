@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+$color-primary: #f9ed69; // color amarillo
+$color-secondary: #f08a5d; // color amarillo
+$color-tertiary: #b83b5e; // color amarillo
+$color-text-dark: #333;
+$color-text-light: #eee;
+
+$width-button: 150px;
+
+@mixin style-link-text($col) {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: $col;
+}
+
+@mixin clearfix {
+  &::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+}
+
+@function divide($a, $b) {
+  @return $a / $b ;
+}
+
+nav {
+  margin: divide(60,2) * 1px; // 30px
+  background-color: $color-primary;
+
+  @include clearfix;
+}
+
+
+
+.navigation {
+  list-style: none;
+  float: left;
+
+  // en vez de .navigation li
+  li {
+    display: inline-block;
+    margin-left: 30px;
+
+    // en vez de li:first-child fuera...
+    &:first-child {
+      margin: 0;
+    }
+
+    // .navigation li a:link
+    a:link {
+      @include style-link-text($color-text-dark);
+    }
+  }
+}
+
+.button {
+  float: right;
+}
+
+// Extend ejemplo
+%btn-placeholder {
+  padding: 10px;
+  display: inline-block;;
+  text-align: center;
+  border-radius: 100px;
+  width: $width-button;
+  @include style-link-text($color-text-light);
+}
+
+// Para usar más abajo con extend
+/*.btn-main:link,
+.btn-hot:link {
+  padding: 10px;
+  display: inline-block;;
+  text-align: center;
+  border-radius: 100px;
+  width: $width-button;
+  @include style-link-text($color-text-light);
+}*/
+
+.btn-main {
+  &:link {
+    @extend %btn-placeholder;
+    background-color: $color-secondary;
+  }
+
+  &:hover {
+    background-color: darken($color-secondary, 15%);
+  }
+}
+
+.btn-hot {
+  &:link {
+    @extend %btn-placeholder;
+    background-color: $color-tertiary;
+  }
+
+  &:hover {
+    background-color: lighten($color-tertiary, 10%);
+  }
+}

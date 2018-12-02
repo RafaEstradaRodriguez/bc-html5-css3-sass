@@ -1,0 +1,41 @@
+/* line 13, ../scss/pra-content.scss */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 18, ../scss/pra-content.scss */
+ul {
+  width: 100%;
+  border: 1px #E53935 solid;
+  background: #1F3063;
+  overflow: hidden;
+}
+
+/* line 25, ../scss/pra-content.scss */
+li {
+  box-sizing: border-box;
+  background: #63521f;
+  font-family: Arial;
+  font-size: 1rem;
+  color: #D3F3FF;
+  list-style-type: none;
+  padding: 0.5rem;
+  width: 12.5%;
+  display: block;
+  float: left;
+}
+/* line 37, ../scss/pra-content.scss */
+li:hover {
+  background: #1F3063;
+  cursor: pointer;
+}
+@media only screen and (max-width: 400px) {
+  /* line 25, ../scss/pra-content.scss */
+  li {
+    width: 100%;
+    font-size: 1.5rem;
+    text-align: center;
+    line-height: 2.5rem;
+  }
+}

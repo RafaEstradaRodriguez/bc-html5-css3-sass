@@ -1,0 +1,50 @@
+$colorMenu: #1F3063;
+$colorOption: complement($colorMenu);
+$colorMenuTexto: #D3F3FF;
+
+@mixin responsive($width)
+{
+  // si tenemos hasta el $width de ancho, se aplica
+  @media only screen and (max-width: $width) {
+    @content;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  width: 100%;
+  border:1px #E53935 solid;
+  background: $colorMenu;
+  overflow: hidden;
+}
+
+li {
+  box-sizing: border-box;
+  background: $colorOption;
+  font-family: Arial;
+  font-size: 1rem;
+  color: $colorMenuTexto;
+  list-style-type: none;
+  padding: 0.5rem;
+  width: (100% / 8);
+  display: block;
+  float: left;
+
+  &:hover {
+    background: $colorMenu;
+    cursor: pointer;
+  }
+
+  @include responsive(400px) {
+    width: 100%;
+    font-size: 1.5rem;
+    text-align: center;
+    line-height: 2.5rem;
+  }
+
+}
+

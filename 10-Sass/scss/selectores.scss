@@ -1,0 +1,37 @@
+// Ejemplo de string separadas por punto
+$clasesCss: "
+  .clase1,
+  #clase2
+";
+
+#{$clasesCss} {
+  color: #F00;
+}
+
+// Ejemplo de strings para clases dentro de un map
+$clasesCss2: (
+        selector1: ".clase2-1",
+);
+
+#{map-get($clasesCss2, selector1)} {
+  color: #0f0;
+}
+
+// Ejemplo de reemplazo de selectores
+$selectorReemplazo: ".claseA-1 .claseA-2";
+#{selector-replace($selectorReemplazo, ".claseA-2", ".claseB-2")} {
+  color: #FF0;
+}
+
+#{selector-unify(".claseA-3", ".claseA-4")} {
+  color: #0FF;
+}
+
+// Vamos a sacar los selectores simples de una lista compuesta de selección
+#{simple-selectors(".claseA-5.claseA-6.claseA-7")} {
+  color: #FFF;
+}
+
+// TODO pendiente mirar los if en sass para aplicarlos a feature-exists
+//if (feature-exists("box-shadow"), {})
+

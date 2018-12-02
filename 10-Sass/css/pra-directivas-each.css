@@ -1,0 +1,37 @@
+@charset "UTF-8";
+/**
+ * Queremos mostrar los avatars de los ganadores de un concurso según una estructura
+ * tanto gráfica como de datos que lo soporten.
+ * Para ello contamos con los ficheros gráficos de dichos ganadores dentro de un directorio
+ * llamado avatars. Los ficheros están compuestos por el nombre y por el sufijo "-avatar".
+ * El formato de los ficheros es PNG.
+ */
+/* line 11, ../scss/pra-directivas-each.scss */
+.jorge-bg {
+  background-image: url(../avatars/jorge-avatar.png);
+  background-repeat: no-repeat;
+}
+
+/* line 11, ../scss/pra-directivas-each.scss */
+.kiko-bg {
+  background-image: url(../avatars/kiko-avatar.png);
+  background-repeat: no-repeat;
+}
+
+/* line 11, ../scss/pra-directivas-each.scss */
+.rober-bg {
+  background-image: url(../avatars/rober-avatar.png);
+  background-repeat: no-repeat;
+}
+
+/* line 11, ../scss/pra-directivas-each.scss */
+.moi-bg {
+  background-image: url(../avatars/moi-avatar.png);
+  background-repeat: no-repeat;
+}
+
+/* line 11, ../scss/pra-directivas-each.scss */
+.ana-bg {
+  background-image: url(../avatars/ana-avatar.png);
+  background-repeat: no-repeat;
+}

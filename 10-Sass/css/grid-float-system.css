@@ -1,0 +1,68 @@
+@charset "UTF-8";
+/* Grid fila */
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+/* line 1, ../scss/base/_base.scss */
+body {
+  background-color: #0D2C54;
+}
+
+/* line 3, ../scss/base/_typography.scss */
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* line 1, ../scss/layout/_grid.scss */
+.row {
+  max-width: 1140px;
+  background-color: #0D2C54;
+  margin: 0 auto;
+  /* También funcionaría con un simple:
+     overflow: hidden;
+  */
+}
+/* line 7, ../scss/layout/_grid.scss */
+.row:not(:last-child) {
+  margin-bottom: 80px;
+}
+/* line 2, ../scss/abstracts/_mixins.scss */
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 13, ../scss/layout/_grid.scss */
+.row [class^="col-"] {
+  background-color: #00A6ED;
+  color: #edfaff;
+  padding: .5rem 0;
+  text-align: center;
+  float: left;
+}
+/* line 20, ../scss/layout/_grid.scss */
+.row [class^="col-"]:not(:last-child) {
+  margin-right: 60px;
+}
+/* line 24, ../scss/layout/_grid.scss */
+.row .col-1-de-4 {
+  width: calc( (100% - (60px * 3)) / 4 );
+}
+/* line 28, ../scss/layout/_grid.scss */
+.row .col-2-de-4 {
+  width: calc(  2 * ( (100% - (60px * 3)) / 4 ) + 60px);
+}
+/* line 32, ../scss/layout/_grid.scss */
+.row .col-3-de-4 {
+  width: calc(  3 * ( (100% - (60px * 3)) / 4 ) + 2 * 60px );
+}
+/* line 37, ../scss/layout/_grid.scss */
+.row .col-1-de-3 {
+  width: calc((100% - (60px * 2)) / 3);
+}
+/* line 41, ../scss/layout/_grid.scss */
+.row .col-2-de-3 {
+  width: calc( 2 * ((100% - (60px * 2)) / 3) + 60px);
+}
+/* line 45, ../scss/layout/_grid.scss */
+.row .col-1-de-2 {
+  width: calc( (100% - 60px) / 2 );
+}

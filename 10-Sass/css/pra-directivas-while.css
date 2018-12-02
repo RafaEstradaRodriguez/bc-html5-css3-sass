@@ -1,0 +1,61 @@
+@charset "UTF-8";
+/**
+ * Tenemos un ul con 10 elementos y queremos añadir 20 puntos a cada valor de su
+ * componente RGB. Además los elementos li de la lista están identificados con la
+ * clase "gradiente-<su numero de orden>".
+ * Ahora con while
+ */
+/* line 10, ../scss/pra-directivas-while.scss */
+.estilo {
+  color: #0a0a0a;
+}
+
+/* line 20, ../scss/pra-directivas-while.scss */
+li.gradiente-1 {
+  background-color: #0a0a0a;
+}
+
+/* line 20, ../scss/pra-directivas-while.scss */
+li.gradiente-2 {
+  background-color: #141414;
+}
+
+/* line 20, ../scss/pra-directivas-while.scss */
+li.gradiente-3 {
+  background-color: #1e1e1e;
+}
+
+/* line 20, ../scss/pra-directivas-while.scss */
+li.gradiente-4 {
+  background-color: #282828;
+}
+
+/* line 20, ../scss/pra-directivas-while.scss */
+li.gradiente-5 {
+  background-color: #323232;
+}
+
+/* line 20, ../scss/pra-directivas-while.scss */
+li.gradiente-6 {
+  background-color: #3c3c3c;
+}
+
+/* line 20, ../scss/pra-directivas-while.scss */
+li.gradiente-7 {
+  background-color: #464646;
+}
+
+/* line 20, ../scss/pra-directivas-while.scss */
+li.gradiente-8 {
+  background-color: #505050;
+}
+
+/* line 20, ../scss/pra-directivas-while.scss */
+li.gradiente-9 {
+  background-color: #5a5a5a;
+}
+
+/* line 20, ../scss/pra-directivas-while.scss */
+li.gradiente-10 {
+  background-color: #646464;
+}

@@ -1,0 +1,29 @@
+/**
+ * Queremos mostrar los avatars de los ganadores de un concurso según una estructura
+ * tanto gráfica como de datos que lo soporten.
+ * Para ello contamos con los ficheros gráficos de dichos ganadores dentro de un directorio
+ * llamado avatars. Los ficheros están compuestos por el nombre y por el sufijo "-avatar".
+ * El formato de los ficheros es PNG.
+ */
+@mixin backgrounds-list($map) {
+  @if (length($map) > 0) {
+    @each $key, $value in $map {
+      .#{$key}-bg {
+        background-image: url(../avatars/#{$value});
+        background-repeat: no-repeat;
+      }
+    }
+  }
+}
+
+$winners: (
+  "jorge": "jorge-avatar.png",
+  "kiko": "kiko-avatar.png",
+  "rober": "rober-avatar.png",
+  "moi": "moi-avatar.png",
+  "ana": "ana-avatar.png"
+);
+
+@include backgrounds-list($winners);
+
+

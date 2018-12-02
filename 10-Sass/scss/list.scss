@@ -1,0 +1,51 @@
+$list-con-comas: 'elemento1','elemento2','elemento3';
+$list-con-espacios: 'elemento4' 'elemento5' 'elemento6';
+
+// Anidamiento de listas
+
+$lista-anidada: (
+  ("el1a","el2a","el3a"),
+  ("el1b","el2b","el3b")
+);
+
+// Vamos a acceder a algún elemento de la lista
+// (el elemento 0 no existe, para liarnos más si programas en más lenguajes)
+.estilo1 {
+  content: nth($list-con-comas, 1);
+}
+
+// Vamos a acceder al último elemento de la lista (de forma creativa)
+.estilo2 {
+  content: nth($list-con-comas, length($list-con-comas));
+}
+
+// Devolver el indice del elemento dentro de la lista
+.estilo#{index($list-con-comas, "elemento3")} {
+  content: "He puesto bien el nombre de la clase como .estilo3";
+}
+
+// Juntar dos listas
+$lista-unidimensional: join(nth($lista-anidada, 1), nth($lista-anidada, 2));
+
+.#{nth($lista-unidimensional, 1)} {
+  color: #0D47A1;
+  content: "Soy el el1a class";
+}
+
+$lista-de-distintos-separadores: join($list-con-comas, $list-con-espacios);
+.#{nth($lista-de-distintos-separadores, 4)} {
+  content: "Soy el elemento4 class";
+}
+
+// Voy a añadir, a la lista unidimensional, un elemento por el final
+$lista-unidimensional: append($lista-unidimensional, "el3d");
+.#{nth($lista-unidimensional,7)} {
+  color: #0D47A1;
+  content: "Soy el elemento .el3d";
+}
+
+$list-con-espacios: set-nth($list-con-espacios, 2, "elemento5b");
+
+.#{nth($list-con-espacios,2)} {
+  content:"Debería ser elemento5b";
+}

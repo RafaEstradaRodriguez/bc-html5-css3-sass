@@ -1,0 +1,21 @@
+@charset "UTF-8";
+/**
+ * Queremos realizar la definición de un mixin que nos ponga las reglas de estilo
+ * para poner esquinas redondeadas a un div
+ *
+ */
+/* line 25, ../scss/pra-esquinas-redondeadas.scss */
+div.redondeado {
+  -webkit-border-top-left-radius: 2px;
+  -webkit-border-top-right-radius: 2px;
+  -webkit-border-bottom-right-radius: 2px;
+  -webkit-border-bottom-left-radius: 2px;
+  -moz-border-top-left-radius: 2px;
+  -moz-border-top-right-radius: 2px;
+  -moz-border-bottom-right-radius: 2px;
+  -moz-border-bottom-left-radius: 2px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+}

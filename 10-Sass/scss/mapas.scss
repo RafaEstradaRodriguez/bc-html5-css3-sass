@@ -1,0 +1,47 @@
+$mapa:("foo": 1, "bar": 2);
+$mapa2:("foo2": 3, "bar2": 4);
+
+// Combinación de valores
+$mapaFull: map_merge($mapa, $mapa2);
+
+// borrado de elementos
+$mapaFull: map_remove($mapaFull, "bar2");
+
+// Ejemplo de hacer un get de un mapa
+.elemento {
+  color: #{map-get($mapaFull, "foo2")}px;
+}
+
+// Ejemplo de bucle desde un mapa
+$clasesCss3: (
+  p: ".clase3-1",
+  span: ".clase3-2",
+  div: ".clase3-3"
+);
+
+@each $key, $value in $clasesCss3 {
+  #{$value} {
+    color: #00F;
+  }
+}
+
+@each $item in map_values($clasesCss3){
+  #{$item}b {
+    color: #00F;
+  }
+}
+
+@each $item in map_keys($clasesCss3){
+  #{$item} {
+    color: #00F;
+  }
+}
+
+
+
+
+
+
+
+
+

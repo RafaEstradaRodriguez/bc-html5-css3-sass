@@ -1,0 +1,28 @@
+/**
+ Crea el siguiente selector utilizando una solución elegante con listas o mapas
+
+  .quienes-somos .quienes-somos-container,
+  .home .home-container,
+  .contactanos .contactanos-container {
+    ...
+  }
+
+  Basado en el ejemplo de Hugo Giraudel: https://hugogiraudel.com/2013/07/15/understanding-sass-lists/
+*/
+
+$selector: ();
+
+$reglas-items-repetidos: (
+  "quienes-somos",
+  "home",
+  "contactanos"
+);
+
+
+@each $regla-item in $reglas-items-repetidos {
+  $selector: append($selector, unquote(".#{$regla-item} .#{$regla-item}-container"), "comma");
+}
+
+#{$selector} {
+  content: "Aquí en vez del contenido meteríamos las propiedades del estilo";
+}

@@ -1,0 +1,74 @@
+/* line 1, ../scss/header.scss */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 14, ../scss/header.scss */
+nav {
+  margin: 30px;
+  background-color: #f9ed69;
+}
+/* line 18, ../scss/header.scss */
+nav::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* line 28, ../scss/header.scss */
+.navigation {
+  list-style: none;
+  float: left;
+}
+/* line 33, ../scss/header.scss */
+.navigation li {
+  display: inline-block;
+  margin-left: 30px;
+}
+/* line 38, ../scss/header.scss */
+.navigation li:first-child {
+  margin: 0;
+}
+/* line 43, ../scss/header.scss */
+.navigation li a:link {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #333;
+}
+
+/* line 51, ../scss/header.scss */
+.button {
+  float: right;
+}
+
+/* line 55, ../scss/header.scss */
+.btn-main:link,
+.btn-hot:link {
+  padding: 10px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 100px;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 150px;
+  color: #eee;
+}
+
+/* line 69, ../scss/header.scss */
+.btn-main:link {
+  background-color: #f08a5d;
+}
+/* line 73, ../scss/header.scss */
+.btn-main:hover {
+  background-color: #ea5717;
+}
+
+/* line 79, ../scss/header.scss */
+.btn-hot:link {
+  background-color: #b83b5e;
+}
+/* line 83, ../scss/header.scss */
+.btn-hot:hover {
+  background-color: #cb5b7b;
+}

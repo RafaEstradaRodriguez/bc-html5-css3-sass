@@ -1,0 +1,37 @@
+@charset "UTF-8";
+/* line 13, ../scss/list.scss */
+.estilo1 {
+  content: "elemento1";
+}
+
+/* line 18, ../scss/list.scss */
+.estilo2 {
+  content: "elemento3";
+}
+
+/* line 23, ../scss/list.scss */
+.estilo3 {
+  content: "He puesto bien el nombre de la clase como .estilo3";
+}
+
+/* line 30, ../scss/list.scss */
+.el1a {
+  color: #0D47A1;
+  content: "Soy el el1a class";
+}
+
+/* line 36, ../scss/list.scss */
+.elemento4 {
+  content: "Soy el elemento4 class";
+}
+
+/* line 42, ../scss/list.scss */
+.el3d {
+  color: #0D47A1;
+  content: "Soy el elemento .el3d";
+}
+
+/* line 49, ../scss/list.scss */
+.elemento5b {
+  content: "Debería ser elemento5b";
+}

@@ -1,0 +1,15 @@
+@import "_mixins.scss";
+
+ul {
+  width: 100%;
+  box-sizing: border-box;
+  li {
+    list-style: none;
+    @include grid(5%, 2);
+  }
+}
+div {
+  color: #ff0000 + #00ff00;
+  color: rgba(100, 0, 0, 0.5) + rgba(0, 100, 0, 0.5);
+}
+

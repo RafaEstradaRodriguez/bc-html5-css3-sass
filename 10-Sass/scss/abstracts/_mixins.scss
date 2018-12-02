@@ -1,0 +1,11 @@
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  /* También funcionaría con un simple:
+     overflow: hidden;
+  */
+}

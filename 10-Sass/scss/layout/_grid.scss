@@ -1,0 +1,48 @@
+.row {
+  max-width: $anchura-grid;
+  background-color: $color-fondo-fila;
+  margin: 0 auto;
+
+  // .row:
+  &:not(:last-child) {
+    margin-bottom: $margen-vertical;
+  }
+
+  @include clearfix;
+
+  [class^="col-"] {
+    background-color: $color-fondo-celda;
+    color: $color-celda-texto;
+    padding: .5rem 0;
+    text-align: center;
+    float: left;
+
+    &:not(:last-child) {
+      margin-right: $margen-horizontal;
+    }
+  }
+  .col-1-de-4 {
+    width: calc( (100% - (#{$margen-horizontal} * 3)) / 4 );
+  }
+
+  .col-2-de-4 {
+    width: calc(  2 * ( (100% - (#{$margen-horizontal} * 3)) / 4 ) + #{$margen-horizontal});
+  }
+
+  .col-3-de-4 {
+    width: calc(  3 * ( (100% - (#{$margen-horizontal} * 3)) / 4 ) + 2 * #{$margen-horizontal} );
+  }
+
+
+  .col-1-de-3 {
+    width: calc((100% - (#{$margen-horizontal} * 2)) / 3);
+  }
+
+  .col-2-de-3 {
+    width: calc( 2 * ((100% - (#{$margen-horizontal} * 2)) / 3) + #{$margen-horizontal});
+  }
+
+  .col-1-de-2 {
+    width: calc( (100% - #{$margen-horizontal}) / 2 );
+  }
+}

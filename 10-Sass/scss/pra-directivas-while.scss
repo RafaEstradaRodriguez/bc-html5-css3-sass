@@ -1,0 +1,29 @@
+/**
+ * Tenemos un ul con 10 elementos y queremos añadir 20 puntos a cada valor de su
+ * componente RGB. Además los elementos li de la lista están identificados con la
+ * clase "gradiente-<su numero de orden>".
+ * Ahora con while
+ */
+
+$color: (10,10,10);
+
+.estilo {
+  color: rgb(10, 10, 10);
+}
+
+$indice: 1;
+
+@while $indice < 11 {
+  // Pongo el incremento a cada componente RGB
+  $iteracion: $indice - 1;
+
+  li.gradiente-#{$indice} {
+    background-color: rgb(
+      (nth($color, 1) + (10 * $iteracion)),
+      (nth($color, 2) + (10 * $iteracion)),
+      (nth($color, 3) + (10 * $iteracion))
+    )
+  }
+
+  $indice: $indice + 1;
+}
